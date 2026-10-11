@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>TV Colombia</title>
+<meta name="viewport" content="width=1280">
+<style>
+body{margin:0;background:#111;color:#fff;font-family:Arial,sans-serif;width:1280px}
+h1{font-size:44px;margin:24px 40px 8px}
+p.h{font-size:22px;margin:0 40px 20px;color:#bbb}
+#g{padding:0 30px}
+a.t{display:inline-block;vertical-align:top;width:270px;height:150px;margin:10px;border:6px solid transparent;border-radius:14px;color:#fff;text-decoration:none;font-size:32px;font-weight:bold;text-align:center;line-height:150px;overflow:hidden}
+a.t:focus,a.t.f{border-color:#ffeb3b;outline:none;-webkit-transform:scale(1.06);transform:scale(1.06)}
+</style></head><body>
+<h1>TV Colombia en vivo</h1>
+<p class="h">Use las flechas del control y OK para abrir la se&ntilde;al oficial. Atr&aacute;s para volver.</p>
+<div id="g">
+<a class="t" style="background:#0a7d3b" href="https://www.caracoltv.com/senal-vivo">Caracol</a>
+<a class="t" style="background:#c8102e" href="https://www.canalrcn.com/senal-en-vivo">Canal RCN</a>
+<a class="t" style="background:#e4572e" href="https://www.rtvcplay.co/en-vivo/senal-colombia">Se&ntilde;al Colombia</a>
+<a class="t" style="background:#1f4e9c" href="https://www.rtvcplay.co/en-vivo/canal-institucional">Institucional</a>
+<a class="t" style="background:#d81b60" href="https://www.canalcapital.gov.co/en-vivo-canal-capital/">Canal Capital</a>
+<a class="t" style="background:#0d47a1" href="https://canal1.com.co/senal-en-vivo/">Canal 1</a>
+<a class="t" style="background:#6a1b9a" href="https://www.citytv.com.co/en-vivo">Citytv</a>
+<a class="t" style="background:#00838f" href="https://www.teleantioquia.co/en-vivo/">Teleantioquia</a>
+<a class="t" style="background:#f9a825" href="https://play.telecaribe.co/senal-en-vivo/">Telecaribe</a>
+<a class="t" style="background:#2e7d32" href="https://www.telepacifico.com/en-vivo">Telepac&iacute;fico</a>
+<a class="t" style="background:#ef6c00" href="https://canaltrece.com.co/">Canal Trece</a>
+<a class="t" style="background:#37474f" href="https://www.rtvcplay.co/en-vivo">RTVC Play</a>
+</div>
+<script>
+(function(){
+var t=document.getElementById('g').getElementsByTagName('a'),i=0,C=4;
+function f(n){if(n<0||n>=t.length)return;t[i].className='t';i=n;t[i].className='t f';t[i].focus();}
+document.onkeydown=function(e){e=e||window.event;var k=e.keyCode;
+if(k==37){f(i-1);}else if(k==39){f(i+1);}else if(k==38){f(i-C);}else if(k==40){f(i+C);}
+else if(k==13){window.location.href=t[i].href;}else{return true;}
+if(e.preventDefault)e.preventDefault();return false;};
+window.onload=function(){f(0);};
+})();
+</script></body></html>
