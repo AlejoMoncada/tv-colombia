@@ -2,12 +2,19 @@
 <html lang="es"><head><meta charset="utf-8"><title>TV Colombia</title>
 <meta name="viewport" content="width=1280">
 <style>
+html{background:#111}
 body{margin:0;background:#111;color:#fff;font-family:Arial,sans-serif;width:1280px}
 h1{font-size:44px;margin:24px 40px 8px}
 p.h{font-size:22px;margin:0 40px 20px;color:#bbb}
 #g{padding:0 30px}
 a.t{display:inline-block;vertical-align:top;width:270px;height:150px;margin:10px;border:6px solid transparent;border-radius:14px;color:#fff;text-decoration:none;font-size:32px;font-weight:bold;text-align:center;line-height:150px;overflow:hidden}
 a.t:focus,a.t.f{border-color:#ffeb3b;outline:none;-webkit-transform:scale(1.06);transform:scale(1.06)}
+footer{margin:4px 40px 28px;color:#8d8d8d;font-size:16px;line-height:1.45}
+footer p{margin:0 0 8px}
+a.legal{color:#c8c8c8;font-size:18px;text-decoration:underline}
+a.legal:focus,a.legal.f{color:#111;background:#ffeb3b;outline:none;border-radius:8px;padding:4px 10px;text-decoration:none}
+#aviso{display:none;margin:0;color:#ddd;font-size:20px;line-height:1.45}
+#aviso.on{display:block;position:fixed;left:40px;bottom:20px;width:1200px;box-sizing:border-box;padding:16px 18px;background:#1c1c1c;border:3px solid #ffeb3b;border-radius:12px}
 </style></head><body>
 <h1>TV Colombia en vivo</h1>
 <p class="h">Use las flechas del control y OK para abrir la se&ntilde;al oficial. Atr&aacute;s para volver.</p>
@@ -25,14 +32,25 @@ a.t:focus,a.t.f{border-color:#ffeb3b;outline:none;-webkit-transform:scale(1.06);
 <a class="t" style="background:#ef6c00" href="https://canaltrece.com.co/">Canal Trece</a>
 <a class="t" style="background:#37474f" href="https://www.rtvcplay.co/en-vivo">RTVC Play</a>
 </div>
+<footer>
+<p>Descargo de responsabilidad: app no oficial, sin afiliaci&oacute;n con los canales.</p>
+<p><a class="legal" id="acerca" href="#aviso">Acerca de / Aviso legal</a></p>
+<p id="aviso">Esta aplicaci&oacute;n no es oficial y no tiene afiliaci&oacute;n con los canales. No aloja, almacena ni retransmite contenido: solo enlaza a las se&ntilde;ales oficiales y p&uacute;blicas. Las marcas y los contenidos pertenecen a sus titulares. La disponibilidad depende de cada canal. El uso es personal.</p>
+</footer>
 <script>
 (function(){
-var t=document.getElementById('g').getElementsByTagName('a'),i=0,C=4;
-function f(n){if(n<0||n>=t.length)return;t[i].className='t';i=n;t[i].className='t f';t[i].focus();}
-document.onkeydown=function(e){e=e||window.event;var k=e.keyCode;
-if(k==37){f(i-1);}else if(k==39){f(i+1);}else if(k==38){f(i-C);}else if(k==40){f(i+C);}
-else if(k==13){window.location.href=t[i].href;}else{return true;}
+var ch=document.getElementById('g').getElementsByTagName('a'),legal=document.getElementById('acerca'),aviso=document.getElementById('aviso'),t=[],i=0,C=4,n;
+for(n=0;n<ch.length;n++) t.push(ch[n]);
+t.push(legal);
+function paint(el,on){el.className=el===legal?(on?'legal f':'legal'):(on?'t f':'t');}
+function f(n){if(n<0||n>=t.length)return;paint(t[i],false);i=n;paint(t[i],true);aviso.className=(t[i]===legal)?'on':'';t[i].focus();}
+document.onkeydown=function(e){e=e||window.event;var k=e.keyCode,x=i;
+if(k==37)x=i-1;else if(k==39)x=i+1;else if(k==38)x=i-C;else if(k==40)x=(i+C>=t.length&&i<t.length-1)?t.length-1:i+C;
+else if(k==13){if(t[i]===legal)aviso.className='on';else window.location.href=t[i].href;}
+else return true;
+if(k!=13)f(x);
 if(e.preventDefault)e.preventDefault();return false;};
+legal.onclick=function(e){if(e.preventDefault)e.preventDefault();f(t.length-1);return false;};
 window.onload=function(){f(0);};
 })();
 </script></body></html>
