@@ -2,35 +2,59 @@
 <html lang="es"><head><meta charset="utf-8"><title>TV Colombia</title>
 <meta name="viewport" content="width=1280">
 <style>
-html{background:#111}
-body{margin:0;background:#111;color:#fff;font-family:Arial,sans-serif;width:1280px}
-h1{font-size:44px;margin:24px 40px 8px}
-p.h{font-size:22px;margin:0 40px 20px;color:#bbb}
-#g{padding:0 30px}
-a.t{display:inline-block;vertical-align:top;width:270px;height:150px;margin:10px;border:6px solid transparent;border-radius:14px;color:#fff;text-decoration:none;font-size:32px;font-weight:bold;text-align:center;line-height:150px;overflow:hidden}
-a.t:focus,a.t.f{border-color:#ffeb3b;outline:none;-webkit-transform:scale(1.06);transform:scale(1.06)}
-footer{margin:4px 40px 28px;color:#8d8d8d;font-size:16px;line-height:1.45}
-footer p{margin:0 0 8px}
-a.legal{color:#c8c8c8;font-size:18px;text-decoration:underline}
-a.legal:focus,a.legal.f{color:#111;background:#ffeb3b;outline:none;border-radius:8px;padding:4px 10px;text-decoration:none}
-#aviso{display:none;margin:0;color:#ddd;font-size:20px;line-height:1.45}
-#aviso.on{display:block;position:fixed;left:40px;bottom:20px;width:1200px;box-sizing:border-box;padding:16px 18px;background:#1c1c1c;border:3px solid #ffeb3b;border-radius:12px}
+html{background:#100e0c;-webkit-box-sizing:border-box;box-sizing:border-box}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}
+body{width:1280px;margin:0 auto;background:#100e0c;color:#f6f3ec;font-family:Helvetica,Arial,sans-serif;padding:16px 64px 12px}
+h1{font-size:36px;line-height:1.1;font-weight:bold;margin:0 0 4px}
+p.hint{font-size:24px;line-height:1.25;margin:0 0 2px;color:#e4dfd4}
+h2{font-size:26px;line-height:1.15;font-weight:bold;margin:12px 0 6px;color:#f6f3ec}
+.row{font-size:0}
+a.tile{display:inline-block;vertical-align:top;width:23.5%;height:86px;margin:0 1.5% 8px 0;border:6px solid #100e0c;border-radius:16px;text-decoration:none;text-align:center;font-size:32px;font-weight:bold;line-height:1.05;overflow:hidden;-webkit-transition:border-color 160ms ease-out;transition:border-color 160ms ease-out}
+a.tile:before{content:"";display:inline-block;height:100%;vertical-align:middle}
+a.tile span{display:inline-block;vertical-align:middle;max-width:90%}
+a.tile.on,a.tile:focus,a.tile:hover{border-color:#fff;outline:5px solid #ffe14a;outline-offset:4px}
+footer{margin:8px 0 0;color:#e4dfd4;font-size:24px;line-height:1.35}
+footer p{margin:0 0 10px}
+a.legal{color:#f6f3ec;font-size:26px;font-weight:bold;text-decoration:underline}
+a.legal.on,a.legal:focus,a.legal:hover{color:#14110a;background:#ffe14a;outline:none;border-radius:8px;text-decoration:none;-webkit-box-shadow:0 0 0 6px #ffe14a;box-shadow:0 0 0 6px #ffe14a}
+#aviso{display:none;margin:0;color:#f6f3ec;font-size:26px;line-height:1.35}
+#aviso.on{display:block;position:fixed;left:50%;bottom:28px;width:1040px;margin-left:-520px;padding:20px 24px;background:#1c1914;border:4px solid #ffe14a;border-radius:16px;-webkit-box-shadow:0 10px 28px rgba(0,0,0,0.45);box-shadow:0 10px 28px rgba(0,0,0,0.45)}
+::-moz-selection{background:#ffe14a;color:#14110a}
+::selection{background:#ffe14a;color:#14110a}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:#100e0c}
+::-webkit-scrollbar-thumb{background:#ffe14a;border-radius:8px}
 </style></head><body>
 <h1>TV Colombia en vivo</h1>
-<p class="h">Use las flechas del control y OK para abrir la se&ntilde;al oficial. Atr&aacute;s para volver.</p>
-<div id="g">
-<a class="t" style="background:#0a7d3b" href="https://www.caracoltv.com/senal-vivo">Caracol</a>
-<a class="t" style="background:#c8102e" href="https://www.canalrcn.com/senal-en-vivo">Canal RCN</a>
-<a class="t" style="background:#e4572e" href="https://www.rtvcplay.co/en-vivo/senal-colombia">Se&ntilde;al Colombia</a>
-<a class="t" style="background:#1f4e9c" href="https://www.rtvcplay.co/en-vivo/canal-institucional">Institucional</a>
-<a class="t" style="background:#d81b60" href="https://www.canalcapital.gov.co/en-vivo-canal-capital/">Canal Capital</a>
-<a class="t" style="background:#0d47a1" href="https://canal1.com.co/senal-en-vivo/">Canal 1</a>
-<a class="t" style="background:#6a1b9a" href="https://www.citytv.com.co/en-vivo">Citytv</a>
-<a class="t" style="background:#00838f" href="https://www.teleantioquia.co/en-vivo/">Teleantioquia</a>
-<a class="t" style="background:#f9a825" href="https://play.telecaribe.co/senal-en-vivo/">Telecaribe</a>
-<a class="t" style="background:#2e7d32" href="https://www.telepacifico.com/en-vivo">Telepac&iacute;fico</a>
-<a class="t" style="background:#ef6c00" href="https://canaltrece.com.co/">Canal Trece</a>
-<a class="t" style="background:#37474f" href="https://www.rtvcplay.co/en-vivo">RTVC Play</a>
+<p class="hint">Flechas del control para elegir. OK para abrir. Atr&aacute;s para volver.</p>
+<div id="rows">
+<section>
+<h2>Nacionales</h2>
+<div class="row">
+<a class="tile" style="background:#0a7d3b;color:#fff" href="https://www.caracoltv.com/senal-vivo"><span>Caracol</span></a>
+<a class="tile" style="background:#c8102e;color:#fff" href="https://www.canalrcn.com/co/tv-en-vivo"><span>Canal RCN</span></a>
+<a class="tile" style="background:#0d47a1;color:#fff" href="https://canal1.com.co/senal-en-vivo/"><span>Canal 1</span></a>
+</div>
+</section>
+<section>
+<h2>P&uacute;blicos</h2>
+<div class="row">
+<a class="tile" style="background:#e4572e;color:#14110a" href="https://www.rtvcplay.co/en-vivo/senal-colombia"><span>Se&ntilde;al Colombia</span></a>
+<a class="tile" style="background:#1f4e9c;color:#fff" href="https://www.rtvcplay.co/en-vivo/canal-institucional"><span>Institucional</span></a>
+<a class="tile" style="background:#ef6c00;color:#14110a" href="https://canaltrece.com.co/"><span>Canal Trece</span></a>
+<a class="tile" style="background:#37474f;color:#fff" href="https://www.rtvcplay.co/en-vivo"><span>RTVC Play</span></a>
+</div>
+</section>
+<section>
+<h2>Regionales</h2>
+<div class="row">
+<a class="tile" style="background:#d81b60;color:#fff" href="https://www.canalcapital.gov.co/en-vivo-canal-capital/"><span>Canal Capital</span></a>
+<a class="tile" style="background:#6a1b9a;color:#fff" href="https://www.citytv.com.co/en-vivo"><span>Citytv</span></a>
+<a class="tile" style="background:#00838f;color:#fff" href="https://www.teleantioquia.co/en-vivo/"><span>Teleantioquia</span></a>
+<a class="tile" style="background:#f9a825;color:#14110a" href="https://play.telecaribe.co/senal-en-vivo/"><span>Telecaribe</span></a>
+<a class="tile" style="background:#2e7d32;color:#fff" href="https://www.telepacifico.com/en-vivo"><span>Telepac&iacute;fico</span></a>
+</div>
+</section>
 </div>
 <footer>
 <p>Descargo de responsabilidad: app no oficial, sin afiliaci&oacute;n con los canales.</p>
@@ -39,18 +63,94 @@ a.legal:focus,a.legal.f{color:#111;background:#ffeb3b;outline:none;border-radius
 </footer>
 <script>
 (function(){
-var ch=document.getElementById('g').getElementsByTagName('a'),legal=document.getElementById('acerca'),aviso=document.getElementById('aviso'),t=[],i=0,C=4,n;
-for(n=0;n<ch.length;n++) t.push(ch[n]);
-t.push(legal);
-function paint(el,on){el.className=el===legal?(on?'legal f':'legal'):(on?'t f':'t');}
-function f(n){if(n<0||n>=t.length)return;paint(t[i],false);i=n;paint(t[i],true);aviso.className=(t[i]===legal)?'on':'';t[i].focus();}
-document.onkeydown=function(e){e=e||window.event;var k=e.keyCode,x=i;
-if(k==37)x=i-1;else if(k==39)x=i+1;else if(k==38)x=i-C;else if(k==40)x=(i+C>=t.length&&i<t.length-1)?t.length-1:i+C;
-else if(k==13){if(t[i]===legal)aviso.className='on';else window.location.href=t[i].href;}
-else return true;
-if(k!=13)f(x);
-if(e.preventDefault)e.preventDefault();return false;};
-legal.onclick=function(e){if(e.preventDefault)e.preventDefault();f(t.length-1);return false;};
-window.onload=function(){f(0);};
+var aviso=document.getElementById('aviso'),idx=0,back=0,KEY='tvcolombia.focus';
+function all(){
+var nodes=document.getElementById('rows').getElementsByTagName('a'),list=[],i;
+for(i=0;i<nodes.length;i++) list.push(nodes[i]);
+list.push(document.getElementById('acerca'));
+return list;
+}
+function mark(el,on){
+if(!el) return;
+el.className=(el.id==='acerca'?'legal':'tile')+(on?' on':'');
+}
+function mid(el){
+var r=el.getBoundingClientRect();
+return {x:r.left+r.width/2,y:r.top+r.height/2};
+}
+function setFocus(n){
+var list=all(),el,r,sec,head,hr;
+if(n<0||n>=list.length) return;
+if(list[idx]&&list[idx].id!=='acerca'&&list[n].id==='acerca') back=idx;
+mark(list[idx],false);
+idx=n;
+el=list[idx];
+mark(el,true);
+aviso.className=(el.id==='acerca')?'on':'';
+el.focus();
+r=el.getBoundingClientRect();
+if(r.bottom>window.innerHeight-12) window.scrollBy(0,r.bottom-window.innerHeight+20);
+if(r.top<8) window.scrollBy(0,r.top-12);
+sec=el.parentNode;
+while(sec&&sec.tagName!=='SECTION'&&sec.tagName!=='BODY') sec=sec.parentNode;
+if(sec&&sec.tagName==='SECTION'){
+head=sec.getElementsByTagName('h2')[0];
+if(head){hr=head.getBoundingClientRect();if(hr.top<0) window.scrollBy(0,hr.top-8);}
+}
+if(el.id!=='acerca'){
+try{localStorage.setItem(KEY,el.getAttribute('href'));}catch(err){}
+}
+}
+function move(dir){
+var list=all();
+if(dir==='up'&&list[idx].id==='acerca'){setFocus(back);return;}
+var cur=list[idx],c=mid(cur),pass,i,p,dx,dy,primary,secondary,best,bestScore,limit;
+for(pass=0;pass<2;pass++){
+if(pass===1&&(dir==='left'||dir==='right')) break;
+best=-1;bestScore=1e9;limit=pass===0?140:1e9;
+for(i=0;i<list.length;i++){
+if(i===idx) continue;
+p=mid(list[i]);dx=p.x-c.x;dy=p.y-c.y;
+if(dir==='left'&&dx>=-12) continue;
+if(dir==='right'&&dx<=12) continue;
+if(dir==='up'&&dy>=-12) continue;
+if(dir==='down'&&dy<=12) continue;
+if((dir==='left'||dir==='right')&&Math.abs(dy)>36) continue;
+primary=(dir==='left'||dir==='right')?Math.abs(dx):Math.abs(dy);
+secondary=(dir==='left'||dir==='right')?Math.abs(dy):Math.abs(dx);
+if(secondary>limit) continue;
+if(primary*1000+secondary<bestScore){bestScore=primary*1000+secondary;best=i;}
+}
+if(best!==-1){setFocus(best);return;}
+}
+}
+document.onkeydown=function(e){
+e=e||window.event;
+var k=e.keyCode||e.which,cur;
+if(k===37) move('left');
+else if(k===39) move('right');
+else if(k===38) move('up');
+else if(k===40) move('down');
+else if(k===13){
+cur=all()[idx];
+if(cur.id==='acerca') aviso.className='on';
+else window.location.href=cur.href;
+}else return true;
+if(e.preventDefault) e.preventDefault();
+else e.returnValue=false;
+return false;
+};
+document.getElementById('acerca').onclick=function(e){
+if(e&&e.preventDefault) e.preventDefault();
+var list=all(),i;
+for(i=0;i<list.length;i++) if(list[i].id==='acerca') setFocus(i);
+return false;
+};
+window.onload=function(){
+var saved='',list=all(),n=0,i;
+try{saved=localStorage.getItem(KEY)||'';}catch(err){}
+for(i=0;i<list.length;i++) if(list[i].getAttribute('href')===saved) n=i;
+setFocus(n);
+};
 })();
 </script></body></html>

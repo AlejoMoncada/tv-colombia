@@ -18,7 +18,7 @@ ares-setup-device
 
 ```bash
 ares-package webos -o webos/dist
-ares-install --device NOMBRE_TV webos/dist/com.alejomoncada.tvcolombia_1.0.0_all.ipk
+ares-install --device NOMBRE_TV webos/dist/com.alejomoncada.tvcolombia_1.0.1_all.ipk
 ```
 
-El paquete ya generado está en `webos/dist/com.alejomoncada.tvcolombia_1.0.0_all.ipk`.
+El paquete ya generado está en `webos/dist/com.alejomoncada.tvcolombia_1.0.1_all.ipk`.
