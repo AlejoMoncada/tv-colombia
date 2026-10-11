@@ -1,0 +1,11 @@
+{
+  "id": "com.alejomoncada.tvcolombia",
+  "version": "1.0.0",
+  "vendor": "AlejoMoncada",
+  "type": "web",
+  "main": "index.html",
+  "title": "TV Colombia",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "requiredACG": []
+}
