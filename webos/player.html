@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>TV Colombia</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;padding:0;height:100%;background:#000;overflow:hidden;color:#f6f3ec;font-family:Helvetica,Arial,sans-serif}
+#stage{position:fixed;left:0;top:0;width:100%;height:100%;background:#000;z-index:1}
+#stage iframe,#stage video{position:absolute;left:0;top:0;width:100%;height:100%;border:0;background:#000}
+#stage video{object-fit:contain}
+#hud{position:fixed;left:0;right:0;bottom:0;z-index:3;padding:0 40px 26px;font-size:24px;line-height:1.3;color:#f6f3ec;opacity:0;-webkit-transition:opacity 220ms ease-out;transition:opacity 220ms ease-out;pointer-events:none;background:-webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.85));background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.85))}
+#hud.on{opacity:1}
+#hud-name{display:block;font-size:32px;font-weight:bold;color:#ffe14a}
+#hud-hint{display:block;color:#e4dfd4}
+#aviso{display:none;position:fixed;left:50%;top:50%;width:820px;margin:-120px 0 0 -410px;z-index:4;padding:26px 30px;background:#1c1914;border:4px solid #ffe14a;border-radius:16px;font-size:26px;line-height:1.35;text-align:center}
+#aviso.on{display:block}
+</style></head><body>
+<div id="stage"></div>
+<div id="hud"><span id="hud-name"></span><span id="hud-hint"></span></div>
+<p id="aviso"></p>
+<script src="player.js"></script>
+</body></html>
