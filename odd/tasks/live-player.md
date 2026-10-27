@@ -32,9 +32,11 @@ Canales sin fuente reproducible propia (Capital, Citytv, Teleantioquia, Telecari
 
 | ID | Spec | Route | Commit |
 | --- | --- | --- | --- |
-| T1 | S1, S2, S3, S4, S6 | tests Playwright + `player.js`/`player.html` | `feat: play channel live signals in an in-app player` |
-| T2 | S1, S2, S5 | cablear tiles de `index.html` (raíz y `webos/`) | `feat: open channels through the live player` |
-| T3 | S6 | versión 1.0.3, `README.md`, ipk | `build: package release 1.0.3` |
+| T1 | S1, S2, S3, S4, S6 | tests Playwright + `player.js`/`player.html` | `f3cad5d` |
+| T2 | S1, S2, S5 | cablear tiles de `index.html` (raíz y `webos/`) | `a58f426` |
+| T3 | S6 | versión 1.0.3, `README.md`, ipk | `4000483` |
+
+Verificación: `NODE_PATH="$(npm root -g)" node tests/player.test.mjs` → 11/11 verde (RED observado antes de existir `player.html`: 0/10). La resolución Dailymotion en vivo se comprobó en un navegador real: HTTP 200 con CORS y `x9nvvkc` como `onair`.
 
 ## Log
 
